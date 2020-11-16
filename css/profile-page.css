@@ -1,0 +1,22 @@
+/* Mobile First */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*min-height: 100vh;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*font-family: Arial;*/
+}
+
+#profile-jumbotron {
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    margin: 1em;
+}
