@@ -1,0 +1,66 @@
+body {
+    background-color: gainsboro;
+}
+
+.jumbotron {
+    background: indianred;
+    padding: 1rem;
+}
+
+.container-cards {
+    margin: 1rem 1rem 1rem auto;
+}
+
+#grass {
+    color: black;
+    background-color: green;
+}
+
+#fire {
+    color: black;
+    background-color: orangered;
+}
+
+#water {
+    color: black;
+    background-color: dodgerblue;
+}
+
+#elec {
+    color: black;
+    background-color: yellow;
+}
+
+#psy {
+    color: black;
+    background-color: purple;
+}
+
+#fight {
+    color: black;
+    background-color: saddlebrown;
+}
+
+#dark {
+    color: black;
+    background-color: darkslategray;
+}
+
+#steel {
+    color: black;
+    background-color: steelblue;
+}
+
+#fairy {
+    color: black;
+    background-color: deeppink;
+}
+
+#drag {
+    color: black;
+    background-color: gold;
+}
+
+#norm {
+    color: black;
+}
