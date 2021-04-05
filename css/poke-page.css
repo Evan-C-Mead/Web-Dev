@@ -1,9 +1,9 @@
 body {
-    background-color: gainsboro;
+    background-color: lightgrey;
 }
 
 .jumbotron {
-    background: indianred;
+    background-color: indianred;
     padding: 1rem;
 }
 
@@ -11,9 +11,13 @@ body {
     margin: 1rem 1rem 1rem auto;
 }
 
+.card-header {
+    background-color: indianred;
+}
+
 #grass {
     color: black;
-    background-color: green;
+    background-color: darkgreen;
 }
 
 #fire {
@@ -33,7 +37,7 @@ body {
 
 #psy {
     color: black;
-    background-color: purple;
+    background-color: mediumpurple;
 }
 
 #fight {
@@ -48,12 +52,12 @@ body {
 
 #steel {
     color: black;
-    background-color: steelblue;
+    background-color: silver;
 }
 
 #fairy {
     color: black;
-    background-color: deeppink;
+    background-color: pink;
 }
 
 #drag {
@@ -63,6 +67,17 @@ body {
 
 #norm {
     color: black;
+    background-color: white;
+}
+
+#sub {
+    color: black;
+    background-color: whitesmoke;
+}
+
+#type-split {
+    border-top: 2px solid;
+    color: indianred;
 }
 
 .type {
