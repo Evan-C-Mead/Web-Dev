@@ -1,0 +1,7 @@
+{
+  "name": "Web-Dev",
+  "version": "1.0.0",
+  "devDependencies": {
+    "pokedex-promise-v2": "^3.3.0"
+  }
+}
