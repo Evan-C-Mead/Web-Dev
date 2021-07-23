@@ -2,6 +2,7 @@
   "name": "Web-Dev",
   "version": "1.0.0",
   "devDependencies": {
+    "pokeapi-js-wrapper": "^1.2.0",
     "pokedex-promise-v2": "^3.3.0"
   }
 }

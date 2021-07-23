@@ -2,7 +2,7 @@
     "use strict";
 
 // url for Poke API
-    const Pokedex = require('pokedex-promise-v2');
+    const Pokedex = require("pokeapi-js-wrapper");
     const options = {
         protocol: 'https',
         hostName: 'localhost:443',
