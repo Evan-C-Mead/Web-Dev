@@ -2,14 +2,14 @@
     "use strict";
 
 //DOM Elements
-const resultEl = document.getElementById('result')
-const lengthEl = document.getElementById('length')
-const lowercaseEl = document.getElementById('lowercase')
-const uppercaseEl = document.getElementById('uppercase')
-const numbersEl = document.getElementById('numbers')
-const symbolsEl = document.getElementById('symbols')
-const generateEl = document.getElementById('generate')
-const clipboardEl = document.getElementById('clipboard')
+const resultEl = document.getElementById('result');
+const lengthEl = document.getElementById('length');
+const lowercaseEl = document.getElementById('lowercase');
+const uppercaseEl = document.getElementById('uppercase');
+const numbersEl = document.getElementById('numbers');
+const symbolsEl = document.getElementById('symbols');
+const generateEl = document.getElementById('generate');
+const clipboardEl = document.getElementById('clipboard');
 
 const randomFunction = {
     lower: randomLowerLetter(),
@@ -18,7 +18,7 @@ const randomFunction = {
     symbol: randomSymbol()
 };
 
-// Event Listener
+// Event Listeners
 generateEl.addEventListener('click', () => {
     const length = +lengthEl.value;
     const hasLower = lowercaseEl.checked;
@@ -27,6 +27,22 @@ generateEl.addEventListener('click', () => {
     const hasSymbol = symbolsEl.checked;
     // console.log(hasLower, hasUpper, hasNumber, hasSymbol);
     resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+});
+
+clipboardEl.addEventListener('click', () => {
+    const textArea = document.createElement('textarea');
+    const password = resultEl.innerText;
+
+    if (!password) {
+        return;
+    }
+
+    textArea.value = password;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    textArea.remove();
+    alert('password copied to clipboard');
 });
 
 // Generate Password Function
