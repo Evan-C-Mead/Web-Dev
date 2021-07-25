@@ -28,6 +28,10 @@ function plusTwo(x) {
     }
 }
 
+function whatCameFirst() {
+    return ['egg', 'chicken'].sort();
+}
+
 console.log(plusTwo(847)); // 849
 console.log(plusTwo(-52)); // -50
 console.log(plusTwo("4.3")); // 6.3
@@ -37,3 +41,5 @@ console.log(plusTwo(null)); // NaN
 console.log(plusTwo(true)); // NaN
 console.log(plusTwo(false)); // NaN
 console.log(plusTwo(NaN)); // NaN
+
+console.log(whatCameFirst());

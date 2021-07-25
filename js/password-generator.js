@@ -25,23 +25,38 @@ generateEl.addEventListener('click', () => {
     const hasUpper = uppercaseEl.checked;
     const hasNumber = numbersEl.checked;
     const hasSymbol = symbolsEl.checked;
-
-    console.log(hasLower, hasUpper, hasNumber, hasSymbol);
-
-    resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol);
+    // console.log(hasLower, hasUpper, hasNumber, hasSymbol);
+    resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
 });
 
 // Generate Password Function
 function generatePassword(lower, upper, number, symbol, length) {
-    // 1 Init PW Variable
+    // 1. Init PW Variable
     // 2. Filter Out Unchecked Types
     // 3. loop Over Length Call Generator Function
     // 4. Add Final PW to the PW Variable And return
 
     let generatedPassword = '';
     const typesCount = lower + upper + number + symbol;
-    const typesArr = [lower, upper, number, symbol];
+    // console.log("typesCount: ", typesCount);
+    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+    // console.log("typesArr: ", typesArr);
 
+    if (typesCount === 0) {
+        return '';
+    }
+
+    for (let i = 0; i < length; i += typesCount) {
+        typesArr.forEach(type => {
+           const functionName = Object.keys(type)[0];
+            // console.log('functionName: ', functionName);
+           generatedPassword += randomFunction[functionName];
+        });
+    }
+    console.log(generatedPassword);
+    const finalPassword = generatedPassword.slice(0, length);
+    console.log(finalPassword);
+    return finalPassword;
 }
 
 // Generator Functions
