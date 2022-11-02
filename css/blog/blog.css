@@ -1,3 +1,7 @@
+body {
+    /*background-color: #4bde9a;*/
+}
+
 article {
     display: grid;
     grid-template-columns: 1fr 0.5in [start] 1.25in 5.50in 1.25in [end] 0.5in 1fr;
@@ -30,22 +34,22 @@ article * {
     grid-column: 1 / 8;
 }
 
-img.size-1, img.size-2, img.size-3, img.size-4 {
+.size-1 img, .size-2 img, .size-3 img, .size-4 img {
     width: 100%;
 }
 
-h2, p:not(:last-child) {
+h2, p {
     margin-bottom: 2.4rem;
 }
 
 h1 {
     font: 700 2.0rem/1.2 "Roboto";
-    color: hsl(000, 0%, 33%);
+    color: hsl(000, 000%, 33%);
 }
 
 h2 {
     font: 400 1.5rem/1.2 "Roboto";
-    color: hsl(000, 0%, 33%);
+    color: hsl(000, 000%, 83%);
 }
 
 time {
@@ -60,7 +64,18 @@ h3 {
 
 p {
     font: 400 1.0rem/1.5 "Roboto";
-    color: hsl(000, 0%, 33%);
+    color: hsl(000, 000%, 33%);
+}
+
+figcaption p {
+    font: 400 1.0rem/1.5 "Roboto";
+    color: hsl(000, 000%, 83%);
+}
+
+figcaption {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
 a {
@@ -77,4 +92,15 @@ a {
     :root {
         font-size: 16px;
     }
+}
+
+.share {
+    display: flex;
+    justify-content: center;
+}
+
+.share img {
+    padding: 0.75rem;
+    width:   1.50rem;
+    height:  1.50rem;
 }
